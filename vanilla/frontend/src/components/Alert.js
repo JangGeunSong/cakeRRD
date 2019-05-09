@@ -15,6 +15,7 @@ export class Alert extends Component {
             if(error.msg.name) alert.error(`Name: ${error.msg.name.join()}`)
             if(error.msg.descripttion) alert.error(`Description: ${error.msg.descripttion.join()}`)
             if(error.msg.Image) alert.error(`Image: ${error.msg.Image.join()}`)
+            if(error.msg.non_field_errors) alert.error(error.msg.non_field_errors.join())
         }
 
         if(message !== previousProps.message) {
