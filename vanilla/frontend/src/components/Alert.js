@@ -21,6 +21,7 @@ export class Alert extends Component {
         if(message !== previousProps.message) {
             if(message.deletePost) alert.success(message.deletePost);
             if(message.addPost) alert.success(message.addPost);
+            if(message.passwordsNotMatch) alert.error(message.passwordsNotMatch);
         }
     }
 
