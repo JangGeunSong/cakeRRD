@@ -84,13 +84,12 @@ WSGI_APPLICATION = 'vanilla.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
+        'ENGINE': 'django.db.backends.sqlite3',
         'HOST': 'mongodb+srv://testuser:qlalfqjsgh@post-rdm59.mongodb.net/test?retryWrites=true',
         'NAME' : 'testuser',
         'PASSWORD' : 'qlalfqjsgh',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

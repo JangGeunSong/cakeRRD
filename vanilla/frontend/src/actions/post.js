@@ -6,7 +6,7 @@ import { GET_POST, DELETE_POST, ADD_POST } from './types';
 
 // GET POSTS
 export const getPost = () => (dispatch, getState) => {
-    axios.get('/', tokenConfig(getState))
+    axios.get('/', { maxContentLength: 2000 }, tokenConfig(getState))
     .then(response => {
         dispatch({
             type : GET_POST,
